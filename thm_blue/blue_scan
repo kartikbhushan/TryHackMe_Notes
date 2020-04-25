@@ -1,0 +1,50 @@
+# Nmap 7.80 scan initiated Sat Mar 28 07:35:12 2020 as: nmap -vv -sS --script vuln -oN blue_scan 10.10.32.200
+Increasing send delay for 10.10.32.200 from 0 to 5 due to 167 out of 556 dropped probes since last increase.
+Nmap scan report for 10.10.32.200
+Host is up, received echo-reply ttl 127 (0.17s latency).
+Scanned at 2020-03-28 07:35:24 EDT for 119s
+Not shown: 991 closed ports
+Reason: 991 resets
+PORT      STATE SERVICE       REASON
+135/tcp   open  msrpc         syn-ack ttl 127
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+139/tcp   open  netbios-ssn   syn-ack ttl 127
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+445/tcp   open  microsoft-ds  syn-ack ttl 127
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+3389/tcp  open  ms-wbt-server syn-ack ttl 127
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+|_sslv2-drown: 
+49152/tcp open  unknown       syn-ack ttl 127
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49153/tcp open  unknown       syn-ack ttl 127
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49154/tcp open  unknown       syn-ack ttl 127
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49158/tcp open  unknown       syn-ack ttl 127
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49159/tcp open  unknown       syn-ack ttl 127
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+
+Host script results:
+|_samba-vuln-cve-2012-1182: NT_STATUS_ACCESS_DENIED
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
+| smb-vuln-ms17-010: 
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|           
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|_      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Mar 28 07:37:23 2020 -- 1 IP address (1 host up) scanned in 131.14 seconds
