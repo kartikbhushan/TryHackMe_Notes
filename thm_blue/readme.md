@@ -2,7 +2,7 @@
 
 ## IP address = 10.10.32.200
 
-# Nmap Scans :- 
+## Nmap Scans :- 
 
 ```
 sudo nmap -vv -sS --script vuln -oN blue_scan 10.10.32.200
@@ -21,11 +21,11 @@ PORT      STATE SERVICE            VERSION
 Service Info: Host: JON-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
 ```
 
-# OS on machine - 
+## OS on machine - 
 
 ``` Windows 7 ```
 
-# Active Vulnerability found -
+## Active Vulnerability found -
 
 ```
 ms17-010 (Eternal Blue)
