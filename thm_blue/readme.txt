@@ -1,4 +1,4 @@
-# hm Blue
+#thm Blue
 
 # IP address = 10.10.32.200
 
